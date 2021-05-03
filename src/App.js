@@ -14,7 +14,7 @@ let App=()=> {
                 <Switch>
                     <Route path="/domiciliation" component={Domicilian}/>
                     <Route path='/' component={Home}/>              
-                    <Route exact path="/signup" component={SignUp}/>
+                    <Route path="/signup" component={SignUp}/>
                     <Route path="/signin" component={Login}/>
                 </Switch>
             </Router> 

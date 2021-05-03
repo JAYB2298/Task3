@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from "./Navbar/Navbar"
+import Domicilian from "./Domiciliation/Domiciliation"
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom"
+import Home from "./Home/Home"
+import SignUp from './User/SignUp'
+import Login from './User/login'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let App=()=> {
+    return (
+        <>
+            <Router>
+            <Navbar/>
+                <Switch>
+                    <Route path="/domiciliation" component={Domicilian}/>
+                    <Route path='/' component={Home}/>              
+                    <Route exact path="/signup" component={SignUp}/>
+                    <Route path="/signin" component={Login}/>
+                </Switch>
+            </Router> 
+           
+        </>
+    )
 }
 
 export default App;

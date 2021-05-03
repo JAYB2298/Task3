@@ -13,13 +13,17 @@ export default function Domiciliation() {
         {id:3,days:"The day",rupee:"140$"},
     ]
 
+    
     let togglehandler=()=>{
         ShCalender(true)
     }
 
+    
     let capture=()=>{
         console.log(value);
     }
+    
+    
     let calender=null;
     if(showCalender){
         calender=(
@@ -50,6 +54,7 @@ export default function Domiciliation() {
         )
     }
     
+   
     return (
         <div className="container">
             <h1 mt-4>Nomadic Space</h1>
